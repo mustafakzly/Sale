@@ -57,30 +57,13 @@
   }
   
   .control-button.prev {
+    font-size: 40px;
+    background-color: transparent;
     left: 0;
   }
   
   .control-button.next {
+    font-size: 40px;
+    background-color: transparent;
     right: 0;
   }
-  
-  @media (max-width: 768px) {
-    .slide {
-      flex-direction: column;
-    }
-  
-    .slide-text,
-    .slide-image {
-      flex-basis: auto;
-      width: 100%;
-    }
-  
-    .control-button.prev,
-    .control-button.next {
-      width: 100%;
-      position: static;
-      transform: none;
-      margin-top: 10px;
-    }
-  }
-  

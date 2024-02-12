@@ -29,7 +29,7 @@
     margin-top: 30px;
 }
 .sale-box:hover{
-    transform: scale(1.02);
+    transform: scale(1.04);
     transition: .3s ease;
     box-shadow: 1px 1px 1px 10px rgba(121, 117, 117, 0.062);
     border-radius: 20px;
