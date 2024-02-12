@@ -1,1 +1,1 @@
-# sale
+test amaçlıdır
