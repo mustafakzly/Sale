@@ -1,0 +1,19 @@
+.communication{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid rgb(212, 205, 205);
+}
+.communication-left *{
+    margin: 0 10px;
+    text-decoration: none;
+    color: rgb(66, 62, 62);
+    font-size: 20px;
+}
+.communication-right img{
+    width: 25px;
+}
+.communication-right *{
+    margin: 0 5px;
+}
