@@ -1,0 +1,86 @@
+/* Slider.css */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(170, 166, 166);
+    color: white;
+  }
+  
+  .slide {
+    width: 100%;
+    display: flex;
+  }
+  
+  .slide-text,
+  .slide-image {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slide-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .slide-text *{
+    margin: 10px 0;
+  }
+  .slide-image img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  .slide-button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .control-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .control-button.prev {
+    left: 0;
+  }
+  
+  .control-button.next {
+    right: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .slide {
+      flex-direction: column;
+    }
+  
+    .slide-text,
+    .slide-image {
+      flex-basis: auto;
+      width: 100%;
+    }
+  
+    .control-button.prev,
+    .control-button.next {
+      width: 100%;
+      position: static;
+      transform: none;
+      margin-top: 10px;
+    }
+  }
+  
