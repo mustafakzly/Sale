@@ -4,37 +4,37 @@ import { NavLink } from 'react-router-dom';
 function Navbottom() {
     return ( 
         <div className="navbar-bottom">
-            <NavLink to='/'>
+            <NavLink to='/jewelry'>
                 Takı
             </NavLink>
-            <NavLink to='/'>
+            <NavLink to='/market'>
                 Market
             </NavLink>
-            <NavLink to='/'>
+            <NavLink to='/electronic'>
                 Elektronik
             </NavLink>
-            <NavLink to='/'>
+            <NavLink to='/stationary'>
                 Kırtasiye
             </NavLink>
-            <NavLink to='/'>
+            <NavLink to='/toy'>
                 Oyuncak
             </NavLink>
-            <NavLink to='/'>
+            <NavLink to='/shoe'>
                 Ayakkabı
             </NavLink>
-            <NavLink to='/'>
+            <NavLink to='/textile'>
                 Tekstil
             </NavLink>
-            <NavLink to='/'>
+            <NavLink to='/appliances'>
                 Beyaz Eşya
             </NavLink>
-            <NavLink to='/'>
+            <NavLink to='/furniture'>
                 Mobilya
             </NavLink>
-            <NavLink to='/'>
+            <NavLink to='/sport'>
                 Spor
             </NavLink>
-            <NavLink to='/'>
+            <NavLink to='/cosmetic'>
                 Kozmetik
             </NavLink>
             <NavLink to='/'>

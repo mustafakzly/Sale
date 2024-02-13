@@ -9,7 +9,7 @@ function Signup() {
             </NavLink>
             <form className='signup-form'>
                 <h1>Yeni Üyelik</h1>
-                <div className='item'>
+                <div className='items'>
                     <div>
                         <span>Adı</span>
                     </div>
@@ -17,7 +17,7 @@ function Signup() {
                         <input type='text' />
                     </div>
                 </div>
-                <div className='item'>
+                <div className='items'>
                     <div>
                         <span>Soyadı</span>
                     </div>
@@ -26,7 +26,7 @@ function Signup() {
                     </div>
 
                 </div>
-                <div className='item'>
+                <div className='items'>
                     <div>
                         <span>Email</span>
                     </div>
@@ -35,7 +35,7 @@ function Signup() {
                     </div>
 
                 </div>
-                <div className='item'>
+                <div className='items'>
                     <div>
                         <span>Şifre</span>
                     </div>
@@ -44,7 +44,7 @@ function Signup() {
                     </div>
 
                 </div>
-                <div className='item2'>
+                <div className='items2'>
                     <div>
                         <span>Cinsiyet</span>
                     </div>
@@ -58,7 +58,7 @@ function Signup() {
                     </div>
 
                 </div>
-                <div className='item'>
+                <div className='items'>
                     <div>
                         <span>Cep Telefonu</span>
                     </div>
@@ -66,7 +66,7 @@ function Signup() {
                         <input type='phone' placeholder='(5XX) XXX XX XX' />
                     </div>
                 </div>
-                <div className='item2'>
+                <div className='items2'>
                     <div>
                         <input type='checkbox'/>
                         <span>Üyelik sözleşmesini kabul ediyorum.</span>

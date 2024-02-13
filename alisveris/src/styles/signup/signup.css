@@ -14,24 +14,24 @@
     padding: 10px 50px;
     width: 550px;
 }
-.item{
+.items{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
-.item2{
+.items2{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
-.item2 input{
+.items2 input{
     width: 15px;
     height: 15px;
     margin-right:5px;
 }
-.item2 label{
+.items2 label{
     margin-right: 5px;
 }
 .gender{
@@ -39,7 +39,7 @@
     align-items: center;
     justify-content: center;
 }
-.item input{
+.items input{
     width: 320px;
     height: 40px;
     margin: 20px 0;
