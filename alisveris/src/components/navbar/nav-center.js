@@ -18,7 +18,7 @@ function Navcenter() {
                     <img src={Search} alt=""></img>
                 </div>
                 <div className="account">
-                    <NavLink to='/'>
+                    <NavLink to='/login'>
                         <img src={User} alt=""/>
                     </NavLink>
                 </div>
