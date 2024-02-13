@@ -28,13 +28,14 @@ function Login() {
                 <div className='login-btn'>
                     <button>Giriş Yap</button>
                 </div>
-            </form>
-            <div className='signup'>
+                <div className='signup'>
                 <h1>Henüz Üye Değil Misiniz?</h1>
-                <NavLink to="">
+                <NavLink to="/signup">
                     <button>Hemen Üye Ol</button>
                 </NavLink>
             </div>
+            </form>
+            
         </div>
     );
 }
