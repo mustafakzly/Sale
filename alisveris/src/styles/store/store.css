@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 15px;
-    padding: 50px;
+    padding: 30px;
     text-align: center;
 }
 .store-item{

@@ -76,6 +76,7 @@
     }
     .signups img{
         margin: 15px;
+        width: 150px;
     }
     .items span{
         font-size: 15px;
@@ -84,7 +85,10 @@
     .signup-form{
         padding: 10px 20px;
     }
-
+    .signup-form h1{
+        font-size: 25px;
+        margin: 20px 0;
+    }
     .items2 input{
         width: 12px;
         height: 12px;

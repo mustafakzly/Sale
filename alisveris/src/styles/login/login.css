@@ -72,6 +72,10 @@
 }
 
 @media (max-width: 575.98px) {
+    .login img{
+        margin: 25px;
+        width: 150px;
+    }
     .signup h1{
         font-size: 20px;
     }
