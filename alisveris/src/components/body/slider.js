@@ -16,7 +16,7 @@ function Slider() {
       {
         src: 'https://ideacdn.net/idea/ed/42/themes/selftpl_651582b96dbcc/assets/uploads/slider_picture_5.png?revision=7.2.7.3-2-1703598658',
         title: 'Ideasoft Whatsapp',
-        description: 'Sipariş almanın en kolay yolu'
+        description: 'Sipariş almanın en kolay yolu.Sipariş almanın en kolay yolu.'
       },
     ];
   

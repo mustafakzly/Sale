@@ -12,3 +12,64 @@
     font-size: 17px;
     margin: 0 1.8%;
 }
+.navbar-bottom-display{
+    display: none;
+    
+
+}
+.navbar-bottom-display button{
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+.navbar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.navbar-overlay a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 5px 20px;
+
+}
+.close-btn{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+@media (max-width: 1200px) { 
+    .navbar-bottom a{
+
+        margin: 0 1.3%;
+    }
+ }
+@media (max-width: 992px) { 
+    .navbar-bottom a{
+        font-size: 13px;
+        margin: 0 1%;
+    }
+ }
+@media (max-width: 768px) { 
+    .navbar-bottom{
+        display: none;
+    }
+    .navbar-bottom-display{
+        display: block;
+        text-align: end;
+        padding: 20px 20px;
+        border-bottom: 1px solid rgb(212, 205, 205);
+    }
+ }

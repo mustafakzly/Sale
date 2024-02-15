@@ -8,6 +8,9 @@
 .navbar-center-left{
     margin: 0 20px;
 }
+.navbar-center-left img{
+    width: 240px;
+}
 .navbar-center-right{
     display: flex;
     align-items: center;
@@ -53,3 +56,51 @@
     top: 60px;
     border-radius: 5px;
 }
+
+@media (max-width: 1200px) { 
+    .navbar-center-left img{
+        width: 200px;
+    }
+    .search{
+        width: 250px;
+    }
+    .search input{
+        width: 100%;
+    }
+    .search img{
+        width: 15px;
+    }
+    .account img{
+        width: 40px;
+        margin: 5px 10px;
+    }
+    .basket img{
+        width: 40px;
+        margin: 5px 10px;
+    }
+    .number{
+        right: 20px;
+    }
+}
+@media (max-width: 768px) { 
+    .navbar-center-left img{
+        width: 125px;
+    }
+    .search{
+        display: none;
+    }
+    .account img{
+        width: 30px;
+        margin: 5px 10px;
+    }
+    .basket img{
+        width: 30px;
+        margin: 5px 10px;
+    }
+    .number{
+        width: 20px;
+        height: 20px;
+        right: 20px;
+        top: 55px;
+    }
+ }

@@ -8,3 +8,17 @@
 .about h3{
     margin: 20px 0;
 }
+
+@media (max-width: 767.98px) { 
+    .about{
+        text-align: center;
+        padding: 50px;
+    }
+    .about h1{
+        margin: 50px 0;
+    }
+    .about h3{
+        margin: 20px 0;
+    }
+    
+}

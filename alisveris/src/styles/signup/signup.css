@@ -12,13 +12,14 @@
 .signup-form{
     border: 1px solid rgb(218, 211, 211);
     padding: 10px 50px;
-    width: 550px;
+  
 }
 .items{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 .items2{
     display: flex;
@@ -68,3 +69,54 @@
     font-size: 22px;
     margin:20px 0;
 }
+
+@media (max-width: 575.98px) { 
+    .signups{
+        margin:0;
+    }
+    .signups img{
+        margin: 15px;
+    }
+    .items span{
+        font-size: 15px;
+        margin-right: 20px;
+    }
+    .signup-form{
+        padding: 10px 20px;
+    }
+
+    .items2 input{
+        width: 12px;
+        height: 12px;
+        margin-right:3px;
+    }
+    .items2 label{
+        font-size: 10px;
+        margin-right: 3px;
+    }
+    .items2 span{
+        font-size: 15px;
+    }
+    .items input{
+        width: 200px;
+    }
+    .cancel{
+        width: 120px ;
+        height: 40px;
+        border: 0;
+        background-color: rgb(199, 192, 192);
+        color: white;
+        font-size: 22px;
+        margin:10px 0;
+    }
+    .accept{
+        width: 120px ;
+        height: 40px;
+        border: 0;
+        background-color: rgb(59, 197, 59);
+        color: white;
+        font-size: 22px;
+        margin:10px 0;
+    }
+    
+ }

@@ -4,3 +4,18 @@
     justify-content: space-between;
     padding: 20px 50px;
 }
+
+
+@media (max-width: 767.98px) { 
+    .footer-bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px;
+        font-size: 10px;
+    }
+    .footer-bottom img{
+        width: 80px;
+    }
+    
+ }

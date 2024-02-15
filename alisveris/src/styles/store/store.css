@@ -36,3 +36,30 @@
     background-color: rgb(85, 224, 85);
     color: white;
 }
+
+@media (max-width: 991.98px) {
+    .store{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .store-item img{
+        height: 250px;
+    }
+}
+@media (max-width: 767.98px) {
+    .store{
+        grid-template-columns: 1fr 1fr;
+    }
+    .store-item img{
+        height: 200px;
+    }
+}
+@media (max-width: 575.98px) {
+    .store{
+        grid-template-columns: 1fr;
+    }
+    .store-item img{
+        height: 100px;
+    }
+}
+
+
