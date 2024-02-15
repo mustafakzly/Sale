@@ -10,8 +10,8 @@ function Navtop() {
     return ( 
         <div className = 'communication'>
             <div className = 'communication-left'>
-                    <NavLink to="/">Hakkımızda</NavLink> 
-                    <NavLink to="/">İletişim</NavLink> 
+                    <NavLink to="/about">Hakkımızda</NavLink> 
+                    <NavLink to="/contact">İletişim</NavLink> 
             </div>
             <div className = 'communication-right'>
                 <a href = 'www.facebook.com'><img src = {Facebook} alt = ''/></a>

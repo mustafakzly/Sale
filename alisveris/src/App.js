@@ -1,42 +1,153 @@
-import Navbar from './components/navbar/navbar.js';
-import Body from './components/body/body.js';
-import Footer from './components/footer/footer.js';
-import Login from './components/login/login.js';
-import Signup from './components/signup/signup.js';
-import Jewelry from './components/store/jewelry.js';
-import Market from './components/store/market.js';
-import Electronic from './components/store/electronic.js';
-import Stationary from './components/store/stationary.js';
-import Toy from './components/store/toy.js';
-import Shoe from './components/store/shoe.js';
-import Textile from './components/store/textile.js';
-import Appliances from './components/store/appliances.js';
-import Furniture from './components/store/furniture.js';
-import Sport from './components/store/sport.js';
-import Cosmetic from './components/store/cosmetic.js';
-import { Routes , Route } from 'react-router-dom';
-import './App.css';
+import {
+  Container,
+  Body,
+  About,
+  Login,
+  Signup,
+  Jewelry,
+  Market,
+  Electronic,
+  Stationary,
+  Toy,
+  Shoe,
+  Textile,
+  Appliances,
+  Furniture,
+  Sport,
+  Cosmetic,
+  Contact,
+  Product,
+} from "./components/index";
+
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
 function App() {
   return (
-    <div className='app'>
-      <Navbar/>
+    <div className="app">
       <Routes>
-        <Route path="/"  element={<Body />} />
-        <Route path="/login"  element={<Login />} />
-        <Route path="/signup"  element={<Signup />} />
-        <Route path="/jewelry"  element={<Jewelry />} />
-        <Route path="/market"  element={<Market />} />
-        <Route path="/electronic"  element={<Electronic />} />
-        <Route path="/stationary"  element={<Stationary />} />
-        <Route path="/toy"  element={<Toy />} />
-        <Route path="/shoe"  element={<Shoe />} />
-        <Route path="/textile"  element={<Textile />} />
-        <Route path="/appliances"  element={<Appliances />} />
-        <Route path="/furniture"  element={<Furniture />} />
-        <Route path="/sport"  element={<Sport />} />
-        <Route path="/cosmetic"  element={<Cosmetic />} />
+        <Route
+          path="/"
+          element={
+            <Container>
+              <Body />
+            </Container>
+          }
+        />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route
+          path="/jewelry"
+          element={
+            <Container>
+              <Jewelry />
+            </Container>
+          }
+        />
+        <Route
+          path="/market"
+          element={
+            <Container>
+              <Market />
+            </Container>
+          }
+        />
+        <Route
+          path="/electronic"
+          element={
+            <Container>
+              <Electronic />
+            </Container>
+          }
+        />
+        <Route
+          path="/stationary"
+          element={
+            <Container>
+              <Stationary />
+            </Container>
+          }
+        />
+        <Route
+          path="/toy"
+          element={
+            <Container>
+              <Toy />
+            </Container>
+          }
+        />
+        <Route
+          path="/shoe"
+          element={
+            <Container>
+              <Shoe />
+            </Container>
+          }
+        />
+        <Route
+          path="/textile"
+          element={
+            <Container>
+              <Textile />
+            </Container>
+          }
+        />
+        <Route
+          path="/appliances"
+          element={
+            <Container>
+              <Appliances />
+            </Container>
+          }
+        />
+        <Route
+          path="/furniture"
+          element={
+            <Container>
+              <Furniture />
+            </Container>
+          }
+        />
+        <Route
+          path="/sport"
+          element={
+            <Container>
+              <Sport />
+            </Container>
+          }
+        />
+        <Route
+          path="/cosmetic"
+          element={
+            <Container>
+              <Cosmetic />
+            </Container>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <Container>
+              <About />
+            </Container>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <Container>
+              <Contact />
+            </Container>
+          }
+        />
+        <Route
+          path="/product"
+          element={
+            <Container>
+              <Product />
+            </Container>
+          }
+        />
       </Routes>
-      <Footer/>
     </div>
   );
 }

@@ -37,9 +37,6 @@ function Navbottom() {
             <NavLink to='/cosmetic'>
                 Kozmetik
             </NavLink>
-            <NavLink to='/'>
-                Popüler Kampanyalar
-            </NavLink>
         </div>
      );
 }

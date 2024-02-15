@@ -32,6 +32,7 @@
     cursor: pointer;
 }
 .store-item button:hover{
-    background-color: rgb(46, 182, 46);
+    transition: .3s ease;
+    background-color: rgb(85, 224, 85);
     color: white;
 }

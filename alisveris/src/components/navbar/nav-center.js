@@ -28,6 +28,9 @@ function Navcenter() {
                     </NavLink>
                 </div>
             </div>
+            <div className="number">
+                <p>0</p>
+            </div>
         </div>
      );
 }

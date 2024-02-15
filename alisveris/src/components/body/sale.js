@@ -1,16 +1,18 @@
 import '../../styles/body/sale.css';
-
+import { NavLink } from 'react-router-dom';
 function Sale() {
     return ( 
         <div className='container'>
         <h1>Çok Satan Ürünler</h1>
         <div className='sale'>
+            <NavLink to='product'>
             <div className='sale-box'>
                 <img src='https://ideacdn.net/idea/ed/42/myassets/products/269/masa_min.jpeg?revision=1697143329' alt=''/>
                 <h3>Oslo Mermer Masa</h3>
                 <p>870.370.37TL - <strike>3132.233.51TL</strike> </p>
                 <button>Sepete Ekle</button>
             </div>
+            </NavLink>
             <div className='sale-box'>
                 <img src='https://ideacdn.net/idea/ed/42/myassets/products/513/mavala-mini-color-249-dark-brown-5-ml_min.jpg?revision=1703598689' alt=''/>
                 <h3>Çok Al Az Öde</h3>

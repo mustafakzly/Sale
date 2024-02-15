@@ -41,3 +41,15 @@
     margin: 5px 20px;
     border-radius: 5px;
 }
+.number{
+    color: white;
+    display: block;
+    text-align: center;
+    position: absolute;
+    background-color: rgb(70, 180, 70);
+    width: 25px;
+    height: 25px;
+    right: 30px;
+    top: 60px;
+    border-radius: 5px;
+}

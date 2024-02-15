@@ -4,6 +4,10 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 20px 0;
 }
+.sale a{
+    text-decoration: none;
+    color: black;
+}
 .sale-box{
     margin: 20px auto;
     padding: 50px 20px;
