@@ -54,7 +54,7 @@
     border: none;
     padding: 10px;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 1;
   }
   
   .control-button.prev {

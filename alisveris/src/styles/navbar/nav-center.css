@@ -38,7 +38,7 @@
     border-radius: 5px;
     margin: 5px 20px;
 }
-.basket img{
+.basket-image{
     border: 1px solid rgb(212, 205, 205);
     padding: 5px 5px;
     margin: 5px 20px;
@@ -56,6 +56,63 @@
     top: 60px;
     border-radius: 5px;
 }
+.basket-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    background-color: rgb(253, 252, 252);
+    display: block;
+    z-index: 100; 
+    font-size: 1.2rem;
+    box-shadow: 0 0 15px 0 rgba(73, 70, 70, 0.623);
+}
+
+.basket-close-btn {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.basket-close-btn img{
+    border: 0;
+}
+.basket-menu-position {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px 30px;
+}
+.basket-menu-img{
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+}
+.basket-menu-position img{
+    border: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.basket-menu-position p{
+    margin: 0 10px;
+    width: 125px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.basket button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.basket-menu-hidden {
+    display: none;
+}
+
 
 @media (max-width: 1200px) { 
     .navbar-center-left img{
@@ -74,12 +131,22 @@
         width: 40px;
         margin: 5px 10px;
     }
-    .basket img{
+    .basket-image{
         width: 40px;
         margin: 5px 10px;
     }
     .number{
         right: 20px;
+    }
+    .basket-menu {
+        font-size: 1rem;
+    }
+    .basket-close-btn img{
+        width: 20px;
+    }
+
+    .basket-menu {
+        width: 50%;
     }
 }
 @media (max-width: 768px) { 
@@ -93,7 +160,7 @@
         width: 30px;
         margin: 5px 10px;
     }
-    .basket img{
+    .basket-image{
         width: 30px;
         margin: 5px 10px;
     }
@@ -102,5 +169,14 @@
         height: 20px;
         right: 20px;
         top: 55px;
+    }
+    .basket-menu {
+        width: 100%;
+    }
+    .basket-menu {
+        font-size: .8rem;
+    }
+    .basket-menu-position {
+        justify-content: center;
     }
  }
