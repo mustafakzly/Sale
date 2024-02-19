@@ -83,12 +83,13 @@
 .basket-menu-position {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    padding: 50px 30px;
+    justify-content: space-around;
+    margin: 50px 30px;
+    border: 1px solid black;
 }
 .basket-menu-img{
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     margin: 10px 0;
 }
 .basket-menu-position img{
@@ -99,7 +100,7 @@
 }
 .basket-menu-position p{
     margin: 0 10px;
-    width: 125px;
+    width: 150px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -175,8 +176,5 @@
     }
     .basket-menu {
         font-size: .8rem;
-    }
-    .basket-menu-position {
-        justify-content: center;
     }
  }
