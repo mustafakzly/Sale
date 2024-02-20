@@ -1,40 +1,40 @@
-import '../../styles/store/store.css';
+import React, { useEffect, useState } from "react";
+import api from "../../helpers/api";
+import "../../styles/store/store.css";
 
 function Toy() {
-    return ( 
-        <div className="store">
-            <div className='store-item'>
-                <img src='https://ideacdn.net/idea/ed/42/myassets/products/313/07-962-on_min.jpg?revision=1697143329' alt=''/>
-                <h3>Bileklik</h3>
-                <p>1.998.980.00 TL<strong></strong></p>
-                <button>SEPETE EKLE</button>
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const response = await api.get("products?populate=*");
+      setProducts(response.data.data);
+    };
+
+    fetchProducts();
+  }, []);
+
+  return (
+    <div className="store">
+      {products.map((item, index) => (
+        <div key={index} className="store-item">
+          {item?.attributes?.image?.data.map((imagesItem, imagesIndex) => (
+            <div key={imagesIndex}>
+              <img
+                src={
+                  "http://192.168.202.128:1337" + imagesItem?.attributes?.url
+                }
+                alt={item?.attributes?.name}
+              />
             </div>
-            <div className='store-item'>
-                <img src='https://ideacdn.net/idea/ed/42/myassets/products/311/kale-kaydirak-salincak_min.jpg?revision=1697143329' alt=''/>
-                <h3>Bileklik</h3>
-                <p>1.998.980.00 TL<strong></strong></p>
-                <button>SEPETE EKLE</button>
-            </div>
-            <div className='store-item'>
-                <img src='https://ideacdn.net/idea/ed/42/myassets/products/309/7583cmyk_min.jpg?revision=1697143329' alt=''/>
-                <h3>Bileklik</h3>
-                <p>1.998.980.00 TL<strong></strong></p>
-                <button>SEPETE EKLE</button>
-            </div>
-            <div className='store-item'>
-                <img src='https://ideacdn.net/idea/ed/42/myassets/products/307/06-437-kir-mavi_min.jpg?revision=1697143329' alt=''/>
-                <h3>Bileklik</h3>
-                <p>1.998.980.00 TL<strong></strong></p>
-                <button>SEPETE EKLE</button>
-            </div>
-            <div className='store-item'>
-                <img src='https://ideacdn.net/idea/ed/42/myassets/products/064/yuzuk-3_min.png?revision=1697143329' alt=''/>
-                <h3>Bileklik</h3>
-                <p>1.998.980.00 TL<strong></strong></p>
-                <button>SEPETE EKLE</button>
-            </div>
+          ))}
+          <h3>{item?.attributes?.name}</h3>
+          <p>{item?.attributes?.price} TL</p>
+          <button>SEPETE EKLE</button>
         </div>
-     );
+      ))}
+    </div>
+  );
 }
 
 export default Toy;

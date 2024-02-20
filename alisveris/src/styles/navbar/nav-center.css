@@ -5,6 +5,10 @@
     padding: 20px;
     border-bottom: 1px solid rgb(212, 205, 205);
 }
+.navbar-center a{
+    text-decoration: none;
+    color: black;
+}
 .navbar-center-left{
     margin: 0 20px;
 }
@@ -65,7 +69,6 @@
     background-color: rgb(253, 252, 252);
     display: block;
     z-index: 100; 
-    font-size: 1.2rem;
     box-shadow: 0 0 15px 0 rgba(73, 70, 70, 0.623);
 }
 
@@ -85,7 +88,7 @@
     align-items: center;
     justify-content: space-around;
     margin: 50px 30px;
-    border: 1px solid black;
+    border: 1px solid rgb(207, 186, 186);
 }
 .basket-menu-img{
     width: 75px;

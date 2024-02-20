@@ -37,6 +37,7 @@ function Navcenter() {
               <button className="basket-close-btn" onClick={toggleBasket}>
                 <img src={Close} alt="Close" />
               </button>
+              <NavLink to="/login">
               <div className="basket-menu-position">
                 <div className="basket-menu-img">
                   <img
@@ -49,12 +50,13 @@ function Navcenter() {
                   <p>Ürün Fiyatı</p>
                 </div>
               </div>
+              </NavLink>
             </div>
           )}
         </div>
       </div>
       <div className="number">
-        <p>0</p>
+        <p>1</p>
       </div>
     </div>
   );
