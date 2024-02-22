@@ -4,17 +4,7 @@ import {
   About,
   Login,
   Signup,
-  Jewelry,
-  Market,
-  Electronic,
-  Stationary,
-  Toy,
-  Shoe,
-  Textile,
-  Appliances,
-  Furniture,
-  Sport,
-  Cosmetic,
+  ProductApi,
   Contact,
   Product,
 } from "./components/index";
@@ -36,92 +26,103 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route
-          path="/jewelry"
+          path="/:categoryId/Takı"
+          component={ProductApi}
           element={
             <Container>
-              <Jewelry />
+              <ProductApi />
             </Container>
           }
         />
         <Route
-          path="/market"
-          element={
-            <Container>
-              <Market />
-            </Container>
+           path="/:categoryId/Market"
+           component={ProductApi}
+           element={
+             <Container>
+               <ProductApi />
+             </Container>
           }
         />
         <Route
-          path="/electronic"
-          element={
-            <Container>
-              <Electronic />
-            </Container>
+          path="/:categoryId/Elektronik"
+           component={ProductApi}
+           element={
+             <Container>
+               <ProductApi />
+             </Container>
           }
         />
         <Route
-          path="/stationary"
-          element={
-            <Container>
-              <Stationary />
-            </Container>
-          }
+        path="/:categoryId/Kırtasiye"
+        component={ProductApi}
+        element={
+          <Container>
+            <ProductApi />
+          </Container>
+       }
         />
         <Route
-          path="/toy"
+          path="/:categoryId/Oyuncak"
+          component={ProductApi}
           element={
             <Container>
-              <Toy />
+              <ProductApi />
             </Container>
-          }
+         }
         />
         <Route
-          path="/shoe"
-          element={
-            <Container>
-              <Shoe />
-            </Container>
-          }
+         path="/:categoryId/Ayakkabı"
+         component={ProductApi}
+         element={
+           <Container>
+             <ProductApi />
+           </Container>
+        }
         />
         <Route
-          path="/textile"
-          element={
-            <Container>
-              <Textile />
-            </Container>
-          }
+         path="/:categoryId/Tekstil"
+         component={ProductApi}
+         element={
+           <Container>
+             <ProductApi />
+           </Container>
+        }
         />
         <Route
-          path="/appliances"
+          path="/:categoryId/Beyaz-Eşya"
+          component={ProductApi}
           element={
             <Container>
-              <Appliances />
+              <ProductApi />
             </Container>
-          }
+         }
         />
         <Route
-          path="/furniture"
-          element={
-            <Container>
-              <Furniture />
-            </Container>
-          }
+         path="/:categoryId/Mobilya"
+         component={ProductApi}
+         element={
+           <Container>
+             <ProductApi />
+           </Container>
+        }
         />
         <Route
-          path="/sport"
+          path="/:categoryId/Spor"
+          component={ProductApi}
           element={
             <Container>
-              <Sport />
+              <ProductApi />
             </Container>
-          }
+         }
         />
         <Route
-          path="/cosmetic"
-          element={
-            <Container>
-              <Cosmetic />
-            </Container>
-          }
+         path="/:categoryId/Kozmetik"
+         component={ProductApi}
+         element={
+           <Container>
+             <ProductApi />
+           </Container>
+        }
         />
         <Route
           path="/about"

@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom';
 import api from "../../helpers/api";
 import "../../styles/store/store.css";
 
-function Toy() {
+function ProductApi() {
   const [products, setProducts] = useState([]);
-
+  const { categoryId } = useParams();
   useEffect(() => {
     const fetchProducts = async () => {
-      const response = await api.get("products?populate=*");
+      const response = await api.get(`products?filters[category][id][$eq]=${categoryId}&populate=*`);
       setProducts(response.data.data);
     };
 
     fetchProducts();
-  }, []);
+  }, [categoryId]);
 
   return (
     <div className="store">
@@ -37,4 +38,4 @@ function Toy() {
   );
 }
 
-export default Toy;
+export default ProductApi;

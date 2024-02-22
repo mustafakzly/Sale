@@ -1,82 +1,77 @@
+import React, { useState } from "react";
 import "../../styles/signup/signup.css";
 import SignupLogo from "../../assets/logo.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+
 function Signup() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [termsAccepted, setTermsAccepted] = useState(false);
+  const history = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!termsAccepted) {
+      alert("Üyelik sözleşmesini kabul etmelisiniz.");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://192.168.202.128:1337/auth/local/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.jwt) {
+        // Başarılı kayıt, kullanıcıyı anasayfaya yönlendirin.
+        history.push("/");
+      } else {
+        // Kayıt başarısız, bir hata mesajı gösterin.
+        alert("Kayıt sırasında bir hata oluştu. Lütfen bilgilerinizi kontrol edin.");
+      }
+    } catch (error) {
+      console.error("Kayıt işlemi sırasında bir hata oluştu", error);
+      alert("Kayıt işlemi sırasında bir hata oluştu. Lütfen daha sonra tekrar deneyin.");
+    }
+  };
+
   return (
     <div className="signups">
       <NavLink to="/">
-        <img src={SignupLogo} alt="" />
+        <img src={SignupLogo} alt="Signup Logo" />
       </NavLink>
-      <form className="signup-form">
+      <form className="signup-form" onSubmit={handleSubmit}>
         <h1>Yeni Üyelik</h1>
         <div className="items">
-          <div>
-            <span>Adı</span>
-          </div>
-          <div>
-            <input type="text" />
-          </div>
-        </div>
-        <div className="items">
-          <div>
-            <span>Soyadı</span>
-          </div>
-          <div>
-            <input type="text" />
-          </div>
-        </div>
-        <div className="items">
-          <div>
+        <div>
             <span>Email</span>
           </div>
-          <div>
-            <input type="email" />
-          </div>
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
         </div>
         <div className="items">
-          <div>
+        <div>
             <span>Şifre</span>
           </div>
-          <div>
-            <input type="password" />
-          </div>
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Şifre" />
         </div>
         <div className="items2">
-          <div>
-            <span>Cinsiyet</span>
-          </div>
-          <div className="gender">
-            <input type="radio" id="erkek" name="sec" value="Erkek" />
-            <label for="erkek">Erkek</label>
-            <input type="radio" id="kadın" name="sec" value="Kadın" />
-            <label for="kadın">Kadın</label>
-            <input type="radio" id="belirsiz" name="sec" value="Belirsiz" />
-            <label for="belirsiz">Belirtmek istemiyorum.</label>
-          </div>
-        </div>
-        <div className="items">
-          <div>
-            <span>Cep Telefonu</span>
-          </div>
-          <div>
-            <input type="phone" placeholder="(5XX) XXX XX XX" />
-          </div>
-        </div>
-        <div className="items2">
-          <div>
-            <input type="checkbox" />
-            <span>Üyelik sözleşmesini kabul ediyorum.</span>
-          </div>
+        <span>Üyelik sözleşmesini kabul ediyorum.</span>
+          <input type="checkbox" checked={termsAccepted} onChange={(e) => setTermsAccepted(e.target.checked)} />
+          
         </div>
         <div className="signup-btn">
-          <div>
-            <NavLink to='/'>
-            <button className="cancel">İptal</button>
-            </NavLink>
-          </div>
-          <div>
-            <button className="accept">Kayıt Ol</button>
-          </div>
+          <NavLink to="/">
+            <button className="cancel" type="button">İptal</button>
+          </NavLink>
+          <button className="accept" type="submit">Kayıt Ol</button>
         </div>
       </form>
     </div>
