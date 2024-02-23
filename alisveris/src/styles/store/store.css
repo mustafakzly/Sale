@@ -5,6 +5,10 @@
     padding: 30px;
     text-align: center;
 }
+.store a{
+    text-decoration: none;
+    color: black;
+}
 .store-item{
     border: 1px solid rgb(196, 190, 190);
     padding: 50px 30px;
@@ -36,7 +40,29 @@
     background-color: rgb(85, 224, 85);
     color: white;
 }
-
+.pages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.pages p{
+    font-size: 20px;
+}
+.page{
+    position: relative;
+    width: 15%;
+    height: 50px;
+    border: 0;
+    margin: 20px;
+    background-color: rgb(252, 108, 108);
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+.page:hover{
+    background-color: rgb(230, 7, 7);
+}
 @media (max-width: 991.98px) {
     .store{
         grid-template-columns: 1fr 1fr 1fr;
@@ -51,6 +77,17 @@
     }
     .store-item img{
         height: 200px;
+    }
+    .page{
+        position: relative;
+        width: 100px;
+        height: 50px;
+        border: 0;
+        margin: 20px;
+        background-color: rgb(252, 108, 108);
+        color: white;
+        cursor: pointer;
+        font-size: 15px;
     }
 }
 @media (max-width: 575.98px) {

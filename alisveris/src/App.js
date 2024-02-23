@@ -35,31 +35,31 @@ function App() {
           }
         />
         <Route
-           path="/:categoryId/Market"
-           component={ProductApi}
-           element={
-             <Container>
-               <ProductApi />
-             </Container>
+          path="/:categoryId/Market"
+          component={ProductApi}
+          element={
+            <Container>
+              <ProductApi />
+            </Container>
           }
         />
         <Route
           path="/:categoryId/Elektronik"
-           component={ProductApi}
-           element={
-             <Container>
-               <ProductApi />
-             </Container>
+          component={ProductApi}
+          element={
+            <Container>
+              <ProductApi />
+            </Container>
           }
         />
         <Route
-        path="/:categoryId/Kırtasiye"
-        component={ProductApi}
-        element={
-          <Container>
-            <ProductApi />
-          </Container>
-       }
+          path="/:categoryId/Kırtasiye"
+          component={ProductApi}
+          element={
+            <Container>
+              <ProductApi />
+            </Container>
+          }
         />
         <Route
           path="/:categoryId/Oyuncak"
@@ -68,25 +68,25 @@ function App() {
             <Container>
               <ProductApi />
             </Container>
-         }
+          }
         />
         <Route
-         path="/:categoryId/Ayakkabı"
-         component={ProductApi}
-         element={
-           <Container>
-             <ProductApi />
-           </Container>
-        }
+          path="/:categoryId/Ayakkabı"
+          component={ProductApi}
+          element={
+            <Container>
+              <ProductApi />
+            </Container>
+          }
         />
         <Route
-         path="/:categoryId/Tekstil"
-         component={ProductApi}
-         element={
-           <Container>
-             <ProductApi />
-           </Container>
-        }
+          path="/:categoryId/Tekstil"
+          component={ProductApi}
+          element={
+            <Container>
+              <ProductApi />
+            </Container>
+          }
         />
         <Route
           path="/:categoryId/Beyaz-Eşya"
@@ -95,16 +95,16 @@ function App() {
             <Container>
               <ProductApi />
             </Container>
-         }
+          }
         />
         <Route
-         path="/:categoryId/Mobilya"
-         component={ProductApi}
-         element={
-           <Container>
-             <ProductApi />
-           </Container>
-        }
+          path="/:categoryId/Mobilya"
+          component={ProductApi}
+          element={
+            <Container>
+              <ProductApi />
+            </Container>
+          }
         />
         <Route
           path="/:categoryId/Spor"
@@ -113,16 +113,16 @@ function App() {
             <Container>
               <ProductApi />
             </Container>
-         }
+          }
         />
         <Route
-         path="/:categoryId/Kozmetik"
-         component={ProductApi}
-         element={
-           <Container>
-             <ProductApi />
-           </Container>
-        }
+          path="/:categoryId/Kozmetik"
+          component={ProductApi}
+          element={
+            <Container>
+              <ProductApi />
+            </Container>
+          }
         />
         <Route
           path="/about"
@@ -141,7 +141,7 @@ function App() {
           }
         />
         <Route
-          path="/product"
+          path="/product/:productId"
           element={
             <Container>
               <Product />
