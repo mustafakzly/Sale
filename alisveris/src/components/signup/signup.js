@@ -1,13 +1,14 @@
 import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import "../../styles/signup/signup.css";
 import SignupLogo from "../../assets/logo.png";
-import { NavLink, useNavigate } from "react-router-dom";
 
 function Signup() {
   const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [termsAccepted, setTermsAccepted] = useState(false);
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,24 +18,26 @@ function Signup() {
     }
 
     try {
-      const response = await fetch("http://192.168.202.128:1337/auth/local/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-          password: password,
-        }),
-      });
+      const response = await fetch(
+        "http://192.168.202.128:1337/api/auth/local/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username: username,
+            email: email,
+            password: password,
+          }),
+        }
+      );
 
       const data = await response.json();
 
-      if (data.jwt) {
-        // Başarılı kayıt, kullanıcıyı anasayfaya yönlendirin.
-        history.push("/");
+      if (data.user) {
+        navigate("/login");
       } else {
-        // Kayıt başarısız, bir hata mesajı gösterin.
         alert("Kayıt sırasında bir hata oluştu. Lütfen bilgilerinizi kontrol edin.");
       }
     } catch (error) {
@@ -51,27 +54,55 @@ function Signup() {
       <form className="signup-form" onSubmit={handleSubmit}>
         <h1>Yeni Üyelik</h1>
         <div className="items">
-        <div>
-            <span>Email</span>
+          <div>
+            <span>Kullanıcı Adı</span>
           </div>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
+          <input
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Kullanıcı Adı"
+          />
         </div>
         <div className="items">
-        <div>
+          <div>
+            <span>Email</span>
+          </div>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
+          />
+        </div>
+        <div className="items">
+          <div>
             <span>Şifre</span>
           </div>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Şifre" />
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Şifre"
+          />
         </div>
         <div className="items2">
-        <span>Üyelik sözleşmesini kabul ediyorum.</span>
-          <input type="checkbox" checked={termsAccepted} onChange={(e) => setTermsAccepted(e.target.checked)} />
-          
+          <span>Üyelik sözleşmesini kabul ediyorum.</span>
+          <input
+            type="checkbox"
+            checked={termsAccepted}
+            onChange={(e) => setTermsAccepted(e.target.checked)}
+          />
         </div>
         <div className="signup-btn">
           <NavLink to="/">
-            <button className="cancel" type="button">İptal</button>
+            <button className="cancel" type="button">
+              İptal
+            </button>
           </NavLink>
-          <button className="accept" type="submit">Kayıt Ol</button>
+          <button className="accept" type="submit">
+            Kayıt Ol
+          </button>
         </div>
       </form>
     </div>
